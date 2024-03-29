@@ -17,7 +17,6 @@ const map = L.map('map').setView([-22.220341, -49.9482], 10);
           });
 
           localizacoes.forEach(local => {
-            console.log({local})
             let marker = L.marker([local.lat, local.lon]);
             map.addLayer(marker);
             marker.bindPopup("<b>"+local.descricao+"</b>");

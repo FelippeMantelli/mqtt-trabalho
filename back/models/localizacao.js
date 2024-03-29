@@ -4,8 +4,8 @@ con.connect(function (err) {
     const sql = `
     CREATE TABLE IF NOT EXISTS localizacao (
       id INT AUTO_INCREMENT PRIMARY KEY,
-      lat FLOAT NOT NULL,
-      lon FLOAT NOT NULL,
+      lat VARCHAR(25) NOT NULL,
+      lon VARCHAR(25) NOT NULL,
       id_dispositivo INT NOT NULL,
       FOREIGN KEY (id_dispositivo) REFERENCES dispositivos(id)
     )`;
